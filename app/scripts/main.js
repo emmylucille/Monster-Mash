@@ -67,6 +67,9 @@ $(".playerPriest" ).click(function() {
   $(".monster").css("opacity", 1);
 });
 
+
+// long winded way of fading out monster.
+
 // $("li").click(function() {
 //   godzilla.health = godzilla.health + 1;
 //   console.log("Whack!")
@@ -90,34 +93,61 @@ $(".playerPriest" ).click(function() {
 $("li").click(function() {
   godzilla.health = godzilla.health + 1;
 
-  $(".monster").fadeTo("fast", 1 - godzilla.health/10);
+  $(".monster").fadeTo("fast", 1 - godzilla.health/11);
   if (godzilla.health === 1) {
-    $(".pow").toggle("slow");
+    $(".pow").fadeIn("slow");
+    $(".pow").fadeTo("slow", 0);
   }
-  if (godzilla.health === 3) {
-    $(".pow").hide("slow");
-  }
-  if (godzilla.health === 4) {
-    $(".wham").toggle("slow");
-  }
-  if (godzilla.health === 6) {
-    $(".wham").hide("slow");
-  }
-  if (godzilla.health === 7) {
-    $(".argh").toggle("slow");
+  if (godzilla.health === 5) {
+    $(".wham").fadeIn("slow");
+    $(".wham").fadeTo("slow", 0);
   }
   if (godzilla.health === 9) {
-    $(".argh").hide("slow");
+    $(".argh").fadeIn("slow");
+    $(".argh").fadeTo("slow", 0);
   }
 
-  if (godzilla.health === 10) {
-    alert("You win! Let's play again");
+// went down a modulus rabbit hole. Trying to figure out how to cycle through each action
+
+  // $("li").click(function() {
+  //   godzilla.health = godzilla.health + 1;
+  //
+  //   $(".monster").fadeTo("fast", 1 - godzilla.health/11);
+  //   if (godzilla.health % 2 === 0) {
+  //     $(".pow").fadeIn("slow");
+  //     $(".pow").fadeTo("slow", 0);
+  //   }
+
+// different way of showing action
+
+// $("li").click(function() {
+//   godzilla.health = godzilla.health + 1;
+//
+//   $(".monster").fadeTo("fast", 1 - godzilla.health/10);
+//   if (godzilla.health === 1) {
+//     $(".pow").toggle("slow");
+//   }
+//   if (godzilla.health === 3) {
+//     $(".pow").hide("slow");
+//   }
+//   if (godzilla.health === 4) {
+//     $(".wham").toggle("slow");
+//   }
+//   if (godzilla.health === 6) {
+//     $(".wham").hide("slow");
+//   }
+//   if (godzilla.health === 7) {
+//     $(".argh").toggle("slow");
+//   }
+//   if (godzilla.health === 9) {
+//     $(".argh").hide("slow");
+//   }
+
+  if (godzilla.health === 11) {
     godzilla.health = 0;
     $("#start").show("slow");
     $("#nunFight").hide();
     $("#priestFight").hide();
-    // $(".pow").hide("slow");
-    // $(".wham").hide("slow");
-    // $(".argh").hide("slow");
+    alert("You win! Let's play again");
   }
 });
