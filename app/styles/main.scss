@@ -1,3 +1,95 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
 * { @include box-sizing(border-box); }
+
+$main: fugaz one;
+
+#container {
+  max-width: 800px;
+  margin: auto;
+}
+
+#start {
+  text-align: center;
+  font-family: $main;
+  font-size: 20px;
+  color: orange;
+  letter-spacing: 2px;
+  margin: 100px;
+}
+
+.playerNun {
+  float: left;
+}
+
+.playerNun2 {
+  float: left;
+  margin-top: 100px;
+}
+
+.playerPriest {
+  float: right;
+}
+
+.playerPriest2 {
+  float: left;
+  margin-top: 100px;
+}
+
+.monster {
+  float: right;
+  margin-bottom: 75px;
+}
+
+.fight {
+  position: relative;
+}
+
+.pow {
+  position: absolute;
+  top: 40px;
+  left: 330px;
+  z-index: 5;
+}
+
+.wham {
+  position: absolute;
+  top: 120px;
+  left: 600px;
+  z-index: 4;
+}
+
+.argh {
+  position: absolute;
+  top: 275px;
+  left: 440px;
+  z-index: 3;
+}
+
+#nunFight {
+  text-align: center;
+  font-family: $main;
+  font-size: 20px;
+  color: orange;
+  letter-spacing: 2px;
+  margin: 100px;
+}
+
+.attack {
+  font-family: $main;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: white;
+  clear: both;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  li {
+    list-style: none;
+    display: inline;
+    margin: 0px 50px;
+    background-color: orange;
+    padding: 5px 20px;
+    border-radius: 8px;
+  }
+}
