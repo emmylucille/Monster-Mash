@@ -1,5 +1,5 @@
 {
-  "name": "turn-based-game",
+  "name": "monster-game",
   "private": true,
   "dependencies": {
     "chai": "~1.8.0",

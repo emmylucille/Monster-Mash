@@ -1,5 +1,8 @@
-@import "../bower_components/bourbon/dist/bourbon";
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+// Custom Styles
 * { @include box-sizing(border-box); }
 
 $main: fugaz one;
@@ -93,7 +96,7 @@ $main: fugaz one;
   text-align: center;
   margin: 0px;
   padding: 0px;
-  
+
   li {
     list-style: none;
     display: inline;
